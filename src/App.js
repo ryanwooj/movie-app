@@ -9,7 +9,10 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    this._getMovies()
+    setTimeout(() => {
+      this._getMovies()
+    }, 1100)
+    // this._getMovies() for enough loading time
   }
 
   _getMovies = async () => {
@@ -40,9 +43,10 @@ class App extends Component {
   }
 
   render() {
+    const { movies } = this.state;
     return (
-      <div className="App">
-        {this.state.movies ? this._renderMovies() : 'loading'}
+      <div className={movies ? "App" : "lds"}>
+        {movies ? this._renderMovies() : <div className="lds-facebook"><div></div><div></div><div></div></div>}
       </div>
     );
   }

@@ -1,33 +1,47 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.lds-facebook {
+  align-content: center;
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-left: 49%;
+  margin-top: 40%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  width: 26px;
+  background: #3C5A99;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 12px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 52px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 90px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 12px;
+    height: 102px;
   }
-  to {
-    transform: rotate(360deg);
+  50%, 100% {
+    top: 38px;
+    height: 52px;
   }
 }
