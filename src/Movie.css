@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   text-overflow: ellipsis;
-  padding: 0 20px;
+  padding: 0 25px;
   box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133, 0.22);
 }
 
@@ -47,8 +47,64 @@
 .Movie .Movie__Poster {
   max-width: 100%;
   position: relative;
-  top: -20px;
+  top: -10px;
   box-shadow: -10px 19px 38px rgba(83,83, 83, 0.3), 10px 15px 12px rgba(80, 80, 80. 0.22);
+}
+
+h3 {
+  margin-top: 0px;
+  align-items: center;
+  text-align: center;
+}
+
+h5 {
+  margin: 0;
+}
+table {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #d4d4d4;
+  font-size: 20px;
+  background: #fff;
+}
+
+table th,
+table tr:nth-child(2n+2) {
+  background: #e7e7e7;
+}
+
+table th,
+table td {
+  padding: 20px 50px;
+}
+
+table th {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #f8ce0b;
 }
 
 @media screen and (min-width: 320px) and (max-width:667px) {

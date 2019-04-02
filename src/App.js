@@ -30,14 +30,22 @@ class App extends Component {
   }
 
   _renderMovies = () => {
-    const movies = this.state.movies.map( movie => {
+    const movies = this.state.movies.map( (movie, index) => {
       return <Movie
         title={movie.title}
         poster={movie.medium_cover_image}
         key={movie.id}
         genres={movie.genres}
         synopsis={movie.synopsis}
-        />
+        rank={index}
+        rating={movie.rating}
+        >
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous">
+        </script>
+      </Movie>
     })
     return movies
   }

@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import LinesEllipsis from 'react-lines-ellipsis';
 import './Movie.css';
 
-const Movie = ({title, poster, genres, synopsis}) => (
+
+const Movie = ({title, poster, genres, synopsis, rank, rating}) => (
   <div className="Movie">
     <div className="Movie__Column">
         <MoviePoster poster={poster} />
+        <h3>{rank+1}</h3>
     </div>
     <div className="Movie__Column">
       <h1>{title}</h1>
+      <h5>{Math.round(rating)/2} Out of 5 </h5>
       <div className="Movie__Genres">
         {genres.map((genre, index) =>
           <MovieGenre genre={genre} key={index} />)}
@@ -34,6 +37,7 @@ const MoviePoster = ({poster}) => (
 const MovieGenre = ({genre}) => (
   <span className="Movie__Genre">{genre} </span>
 );
+
 
 Movie.propTypes = {
   title: PropTypes.string.isRequired,
