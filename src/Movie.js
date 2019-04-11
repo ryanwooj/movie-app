@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import LinesEllipsis from 'react-lines-ellipsis';
 import './Movie.css';
 
-
+// Destructure Object inside function
 const Movie = ({title, poster, genres, synopsis, rank, rating}) => (
   <div className="Movie">
     <div className="Movie__Column">
