@@ -5,10 +5,6 @@ import GitHubCalendar from 'github-calendar';
 
 class App extends Component {
 
-  state = {
-
-  }
-
   componentDidMount = () => {
     setTimeout(() => {
       this._getMovies()
