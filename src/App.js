@@ -12,6 +12,7 @@ class App extends Component {
     // this._getMovies() for enough loading time
   }
 
+// Async await do callApi. This method preferred
   _getMovies = async () => {
     const movies = await this._callApi()
     this.setState({
