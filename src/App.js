@@ -19,7 +19,7 @@ class App extends Component {
       movies
     })
   }
-
+// CAll API first, then gets called in _GETMOVIES
   _callApi = () => {
     return fetch('https://yts.am/api/v2/list_movies.json?sort_by=download_count')
     .then(res => res.json())
