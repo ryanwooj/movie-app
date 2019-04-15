@@ -27,6 +27,7 @@ class App extends Component {
     .catch(err => console.log(err))
   }
 
+// Movie gets rendered here. The movie componenet.
   _renderMovies = () => {
     const movies = this.state.movies.map( (movie, index) => {
       return <Movie
