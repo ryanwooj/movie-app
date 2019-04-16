@@ -51,6 +51,7 @@ class App extends Component {
 
   render() {
     const { movies } = this.state;
+    //Added to show github calendar as a commit 용도
     new GitHubCalendar('.calendar', 'ryanwooj')
     return (
       <div className={movies ? "App" : "lds"}>
