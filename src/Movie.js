@@ -30,6 +30,8 @@ const Movie = ({title, poster, genres, synopsis, rank, rating}) => (
   </div>
 );
 
+//checK LinesEllipsis
+
 const MoviePoster = ({poster}) => (
   <img src={poster} alt="Movie Poster" className="Movie__Poster"/>
 );
