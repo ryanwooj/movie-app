@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movie from './Movie';
+import GitHubCalendar from 'github-calendar';
 
 class App extends Component {
 
@@ -52,6 +53,7 @@ class App extends Component {
 
   render() {
     const { movies } = this.state;
+    new GitHubCalendar('.calendar', 'ryanwooj')
     return (
       <div className={movies ? "App" : "lds"}>
         {movies ? this._renderMovies() : <div className="lds-facebook"><div></div><div></div><div></div></div>}
